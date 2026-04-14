@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohnish Singh Patwal — Strategy & Entrepreneurship</title>
+  <meta name="description" content="President of E-Cell at Woxsen University. Strategy, entrepreneurship, and real-world execution." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #080808;
+      --bg2: #101010;
+      --bg3: #161616;
+      --bg4: #1e1e1e;
+      --gold: #C9A96E;
+      --gold2: #E8C98A;
+      --gold-dim: rgba(201,169,110,0.10);
+      --gold-line: rgba(201,169,110,0.28);
+      --white: #F7F4EF;
+      --grey1: #AAAAAA;
+      --grey2: #666666;
+      --grey3: #333333;
+      --border: rgba(255,255,255,0.06);
+      --border2: rgba(255,255,255,0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 56px; height: 64px;
+      background: rgba(8,8,8,0.96);
+      border-bottom: 0.5px solid var(--border);
+      position: sticky; top: 0; z-index: 99;
+      backdrop-filter: blur(16px);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px; color: var(--gold); letter-spacing: 0.04em;
+    }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a {
+      font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--grey2); text-decoration: none; cursor: pointer;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--bg); background: var(--gold); border: none;
+      padding: 9px 22px; cursor: pointer; transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--gold2); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 92vh;
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+    }
+    .hero-left {
+      padding: 88px 64px;
+      border-right: 0.5px solid var(--border);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .hero-right {
+      padding: 88px 64px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .hero-overline {
+      display: flex; align-items: center; gap: 14px;
+      font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 36px;
+    }
+    .hero-overline-bar { width: 28px; height: 1px; background: var(--gold); flex-shrink: 0; }
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(52px, 6.5vw, 88px);
+      font-weight: 400; line-height: 1.0;
+      color: var(--white); letter-spacing: -0.015em;
+      margin-bottom: 6px;
+    }
+    .hero-name-accent {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(52px, 6.5vw, 88px);
+      font-weight: 400; font-style: italic;
+      color: var(--gold); letter-spacing: -0.015em;
+      display: block; margin-bottom: 40px;
+    }
+    .tagline-block {
+      border-left: 2px solid var(--gold);
+      padding: 14px 20px;
+      margin-bottom: 44px;
+      background: var(--gold-dim);
+    }
+    .tagline-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px; font-style: italic;
+      color: var(--gold2); line-height: 1.6;
+    }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-p {
+      padding: 13px 28px; background: var(--gold); color: var(--bg);
+      font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+      border: none; cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block;
+    }
+    .btn-p:hover { background: var(--gold2); transform: translateY(-1px); }
+    .btn-s {
+      padding: 13px 28px; background: transparent; color: var(--white);
+      font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+      border: 0.5px solid var(--border2); cursor: pointer; transition: all 0.2s;
+      text-decoration: none; display: inline-block;
+    }
+    .btn-s:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-1px); }
+    .hero-descriptor {
+      font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--grey2); margin-bottom: 22px;
+    }
+    .hero-intro {
+      font-size: 15px; line-height: 1.9; color: var(--grey1); margin-bottom: 48px;
+    }
+    .hero-stats {
+      display: grid; grid-template-columns: 1fr 1fr;
+      border: 0.5px solid var(--border);
+    }
+    .hstat {
+      padding: 24px 26px; background: var(--bg2);
+      border-right: 0.5px solid var(--border);
+      border-bottom: 0.5px solid var(--border);
+    }
+    .hstat:nth-child(2n) { border-right: none; }
+    .hstat:nth-child(3), .hstat:nth-child(4) { border-bottom: none; }
+    .hstat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px; color: var(--gold); line-height: 1; margin-bottom: 5px;
+    }
+    .hstat-lbl { font-size: 11px; color: var(--grey2); letter-spacing: 0.08em; text-transform: uppercase; }
+
+    /* ── MARQUEE ── */
+    .marquee-outer {
+      overflow: hidden; padding: 15px 0; background: var(--bg2);
+      border-top: 0.5px solid var(--border);
+      border-bottom: 0.5px solid var(--border);
+    }
+    .marquee-track {
+      display: flex; width: max-content;
+      animation: marquee 24s linear infinite;
+    }
+    .marquee-item {
+      font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--grey2); padding: 0 32px;
+      display: flex; align-items: center; gap: 32px; white-space: nowrap;
+    }
+    .marquee-item::after { content: '·'; color: var(--gold); }
+    @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+    /* ── SECTION WRAPPER ── */
+    .sec { padding: 96px 56px; }
+    .sec-label {
+      display: flex; align-items: center; gap: 16px;
+      font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 56px;
+    }
+    .sec-label::after { content: ''; flex: 1; height: 0.5px; background: var(--border); max-width: 280px; }
+    .sec-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 12px; font-style: italic; color: var(--grey3);
+    }
+    .rule { height: 0.5px; background: var(--border); }
+
+    /* ── ABOUT ── */
+    .about-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 64px; align-items: start; }
+    .about-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 4vw, 44px); font-weight: 400; line-height: 1.2;
+      color: var(--white); margin-bottom: 32px;
+    }
+    .about-heading em { font-style: italic; color: var(--gold); }
+    .about-p { font-size: 15px; line-height: 1.9; color: var(--grey1); margin-bottom: 20px; }
+    .about-right { display: flex; flex-direction: column; gap: 3px; }
+    .about-badge {
+      display: flex; align-items: center; gap: 14px;
+      padding: 15px 20px; background: var(--bg2);
+      border: 0.5px solid var(--border);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .about-badge:hover { background: var(--bg3); border-color: var(--gold-line); }
+    .badge-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+    .badge-text { font-size: 13px; color: var(--grey1); }
+
+    /* ── EXPERIENCE ── */
+    .exp-list { display: flex; flex-direction: column; gap: 3px; }
+    .exp-card {
+      background: var(--bg2); border: 0.5px solid var(--border);
+      overflow: hidden; transition: border-color 0.25s;
+    }
+    .exp-card:hover { border-color: var(--gold-line); }
+    .exp-head {
+      display: grid; grid-template-columns: 32px 1fr auto 24px;
+      align-items: center; gap: 20px; padding: 26px 28px; cursor: pointer;
+    }
+    .exp-idx {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px; font-style: italic; color: var(--grey3);
+    }
+    .exp-role { font-size: 15px; font-weight: 500; color: var(--white); margin-bottom: 4px; }
+    .exp-org { font-size: 12px; color: var(--gold); letter-spacing: 0.03em; }
+    .exp-pill {
+      font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--grey2); background: var(--bg4);
+      padding: 5px 12px; white-space: nowrap;
+      border: 0.5px solid var(--border);
+    }
+    .exp-arrow {
+      font-size: 14px; color: var(--grey3);
+      transition: transform 0.3s, color 0.2s; user-select: none;
+    }
+    .exp-card.open .exp-arrow { transform: rotate(180deg); color: var(--gold); }
+    .exp-body { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1); }
+    .exp-card.open .exp-body { max-height: 400px; }
+    .exp-body-inner {
+      padding: 20px 28px 28px 80px;
+      border-top: 0.5px solid var(--border);
+    }
+    .exp-body-inner ul { list-style: none; }
+    .exp-body-inner li {
+      font-size: 14px; line-height: 1.75; color: var(--grey1);
+      padding: 5px 0; display: flex; align-items: flex-start; gap: 12px;
+    }
+    .exp-body-inner li::before {
+      content: ''; display: block;
+      width: 4px; height: 4px; border-radius: 50%; background: var(--gold);
+      margin-top: 9px; flex-shrink: 0;
+    }
+
+    /* ── SKILLS ── */
+    .skills-wrap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+    .skill-tile {
+      background: var(--bg2); border: 0.5px solid var(--border);
+      padding: 32px 28px; position: relative; overflow: hidden;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .skill-tile::before {
+      content: ''; position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: var(--gold); transform: scaleX(0); transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    .skill-tile:hover::before { transform: scaleX(1); }
+    .skill-tile:hover { background: var(--bg3); border-color: var(--gold-line); }
+    .skill-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px; color: var(--grey3); line-height: 1; margin-bottom: 14px;
+    }
+    .skill-name { font-size: 14px; font-weight: 500; color: var(--white); line-height: 1.35; }
+
+    /* ── EXPLORING ── */
+    .exploring-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3px; }
+    .explore-block {
+      background: var(--bg2); border: 0.5px solid var(--border);
+      padding: 36px 32px; display: flex; flex-direction: column; gap: 12px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .explore-block:hover { border-color: var(--gold-line); background: var(--bg3); }
+    .explore-tag {
+      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
+    }
+    .explore-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; color: var(--white); line-height: 1.3;
+    }
+    .explore-sub { font-size: 13px; color: var(--grey2); line-height: 1.7; }
+
+    /* ── INSIGHTS ── */
+    .blog-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+    .blog-card {
+      background: var(--bg2); border: 0.5px solid var(--border);
+      padding: 32px 28px; cursor: pointer;
+      transition: border-color 0.25s, background 0.2s;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .blog-card:hover { border-color: var(--gold-line); background: var(--bg3); }
+    .blog-category {
+      font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold);
+    }
+    .blog-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px; color: var(--white); line-height: 1.4;
+    }
+    .blog-excerpt { font-size: 13px; color: var(--grey2); line-height: 1.75; flex: 1; }
+    .blog-more {
+      font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--grey3); transition: color 0.2s;
+      display: flex; align-items: center; gap: 8px; margin-top: 4px;
+    }
+    .blog-card:hover .blog-more { color: var(--gold); }
+    .blog-more::after { content: '→'; }
+
+    /* ── CONTACT ── */
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      border-top: 0.5px solid var(--border);
+    }
+    .contact-left {
+      padding: 88px 56px;
+      border-right: 0.5px solid var(--border);
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .contact-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(42px, 5vw, 60px); font-weight: 400; line-height: 1.1;
+      color: var(--white); margin-bottom: 20px;
+    }
+    .contact-heading em { font-style: italic; color: var(--gold); }
+    .contact-sub { font-size: 15px; color: var(--grey2); line-height: 1.85; margin-bottom: 40px; }
+    .contact-link {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--white); text-decoration: none;
+      padding: 14px 22px; border: 0.5px solid var(--border2);
+      transition: all 0.2s; width: fit-content; margin-bottom: 48px;
+    }
+    .contact-link:hover { border-color: var(--gold); color: var(--gold); }
+    .location-label { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey3); margin-bottom: 6px; }
+    .location-val { font-size: 15px; color: var(--grey1); }
+    .contact-right { padding: 88px 56px; background: var(--bg2); }
+    .f-label {
+      display: block; font-size: 10px; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--grey2); margin-bottom: 8px;
+    }
+    .f-field {
+      width: 100%; background: var(--bg3); border: 0.5px solid var(--border);
+      color: var(--white); font-family: inherit; font-size: 14px;
+      padding: 13px 16px; margin-bottom: 20px; outline: none;
+      transition: border-color 0.2s; border-radius: 0;
+    }
+    .f-field:focus { border-color: var(--gold-line); }
+    .f-field::placeholder { color: var(--grey3); }
+    textarea.f-field { min-height: 120px; resize: vertical; }
+    .f-submit {
+      width: 100%; padding: 16px; background: var(--gold); color: var(--bg);
+      border: none; font-family: inherit; font-size: 11px; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer;
+      transition: background 0.2s;
+    }
+    .f-submit:hover { background: var(--gold2); }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 28px 56px; display: flex; justify-content: space-between; align-items: center;
+      border-top: 0.5px solid var(--border);
+    }
+    .footer-l { font-size: 12px; color: var(--grey3); letter-spacing: 0.06em; }
+    .footer-c { font-family: 'Playfair Display', serif; font-style: italic; font-size: 13px; color: var(--gold); }
+    .footer-r { font-size: 11px; color: var(--grey3); letter-spacing: 0.1em; text-transform: uppercase; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 64px 28px; border-right: none; border-bottom: 0.5px solid var(--border); }
+      .hero-right { padding: 40px 28px; }
+      .sec { padding: 64px 28px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .skills-wrap { grid-template-columns: repeat(2, 1fr); }
+      .exploring-row { grid-template-columns: 1fr; }
+      .blog-row { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-left { padding: 56px 28px; border-right: none; border-bottom: 0.5px solid var(--border); }
+      .contact-right { padding: 56px 28px; }
+      footer { padding: 24px 28px; flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">Mohnish</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#insights">Insights</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Let's Connect</button>
+  </nav>
+
+  <!-- HERO -->
+  <section style="background: var(--bg);">
+    <div class="hero">
+      <div class="hero-left">
+        <div class="hero-overline"><span class="hero-overline-bar"></span>President, E-Cell · Woxsen University</div>
+        <h1 class="hero-name">Mohnish<br>Singh</h1>
+        <span class="hero-name-accent">Patwal</span>
+        <div class="tagline-block">
+          <div class="tagline-text">"Strategy in thought.<br>Execution in action."</div>
+        </div>
+        <div class="hero-btns">
+          <a href="#experience" class="btn-p">View My Work</a>
+          <a href="#contact" class="btn-s">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-descriptor">Young strategic operator &amp; entrepreneur</div>
+        <p class="hero-intro">I build real-world experience at the intersection of strategy, entrepreneurship, and execution. Presently leading the E-Cell at Woxsen University while pursuing a dual path in Business and Political Science.</p>
+        <div class="hero-stats">
+          <div class="hstat"><div class="hstat-num">3+</div><div class="hstat-lbl">Leadership Roles</div></div>
+          <div class="hstat"><div class="hstat-num">₹60K</div><div class="hstat-lbl">Funds Raised</div></div>
+          <div class="hstat"><div class="hstat-num">2×</div><div class="hstat-lbl">Academic Disciplines</div></div>
+          <div class="hstat"><div class="hstat-num">1st</div><div class="hstat-lbl">Case Competition</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-outer">
+    <div class="marquee-track">
+      <div class="marquee-item">Strategy</div><div class="marquee-item">Entrepreneurship</div>
+      <div class="marquee-item">Leadership</div><div class="marquee-item">Execution</div>
+      <div class="marquee-item">E-Cell President</div><div class="marquee-item">Woxsen University</div>
+      <div class="marquee-item">BBA + MBA</div><div class="marquee-item">Political Science</div>
+      <div class="marquee-item">Operations</div><div class="marquee-item">Problem Solving</div>
+      <div class="marquee-item">Strategy</div><div class="marquee-item">Entrepreneurship</div>
+      <div class="marquee-item">Leadership</div><div class="marquee-item">Execution</div>
+      <div class="marquee-item">E-Cell President</div><div class="marquee-item">Woxsen University</div>
+      <div class="marquee-item">BBA + MBA</div><div class="marquee-item">Political Science</div>
+      <div class="marquee-item">Operations</div><div class="marquee-item">Problem Solving</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="sec" style="background: var(--bg);">
+    <div class="sec-label"><span class="sec-num">01</span> About</div>
+    <div class="about-grid">
+      <div>
+        <h2 class="about-heading">Driven by a single<br>question — <em>why?</em></h2>
+        <p class="about-p">Why do some organizations thrive while others collapse with seemingly equal resources? That question has defined my intellectual path and shaped every decision I've made.</p>
+        <p class="about-p">It pushed me toward a dual academic track — BBA+MBA at Woxsen University paired with a BA in Political Science. Business shows you how organizations function. Political Science reveals why people and systems behave the way they do. Together, they sharpen every lens you bring to a problem.</p>
+        <p class="about-p">I've served as Class Representative, Head Boy, and now President of E-Cell. Each role taught me a different version of the same truth: execution is where most ideas die, and leadership is the art of closing that gap. My approach is simple — learn something, apply it, improve, repeat.</p>
+      </div>
+      <div class="about-right">
+        <div class="about-badge"><div class="badge-dot"></div><div class="badge-text">BBA + MBA — Woxsen University</div></div>
+        <div class="about-badge"><div class="badge-dot"></div><div class="badge-text">BA in Political Science</div></div>
+        <div class="about-badge"><div class="badge-dot"></div><div class="badge-text">President — E-Cell</div></div>
+        <div class="about-badge"><div class="badge-dot"></div><div class="badge-text">Head Boy — Prior institution</div></div>
+        <div class="about-badge"><div class="badge-dot"></div><div class="badge-text">Class Representative</div></div>
+        <div class="about-badge"><div class="badge-dot"></div><div class="badge-text">Co-Founder — Urvikshana NGO</div></div>
+        <div class="about-badge"><div class="badge-dot"></div><div class="badge-text">Case Crunch 2.0 Winner</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rule"></div>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="sec" style="background: var(--bg);">
+    <div class="sec-label"><span class="sec-num">02</span> Experience &amp; Projects</div>
+    <div class="exp-list">
+
+      <div class="exp-card open" id="e0">
+        <div class="exp-head" onclick="tog('e0')">
+          <div class="exp-idx">01</div>
+          <div><div class="exp-role">President</div><div class="exp-org">Entrepreneurship Cell (E-Cell), Woxsen University</div></div>
+          <div class="exp-pill">Leadership</div>
+          <div class="exp-arrow">⌄</div>
+        </div>
+        <div class="exp-body"><div class="exp-body-inner"><ul>
+          <li>Leading entrepreneurial initiatives and startup-focused programs across campus</li>
+          <li>Managing teams and overseeing end-to-end execution of high-impact events and workshops</li>
+          <li>Building active engagement with industry leaders, investors, and the startup ecosystem</li>
+          <li>Driving E-Cell's vision as an incubation ground for student-led ventures</li>
+        </ul></div></div>
+      </div>
+
+      <div class="exp-card" id="e1">
+        <div class="exp-head" onclick="tog('e1')">
+          <div class="exp-idx">02</div>
+          <div><div class="exp-role">Organising Committee Member</div><div class="exp-org">Hult Prize On-Campus Round</div></div>
+          <div class="exp-pill">Event</div>
+          <div class="exp-arrow">⌄</div>
+        </div>
+        <div class="exp-body"><div class="exp-body-inner"><ul>
+          <li>Organized a globally recognized entrepreneurship competition and supporting workshops</li>
+          <li>Ran workshops covering BMC, Design Thinking, Marketing, Finance, and Pitching</li>
+          <li>Collaborated with industry experts to mentor and guide student participants</li>
+        </ul></div></div>
+      </div>
+
+      <div class="exp-card" id="e2">
+        <div class="exp-head" onclick="tog('e2')">
+          <div class="exp-idx">03</div>
+          <div><div class="exp-role">Operations Intern</div><div class="exp-org">Talampally Group</div></div>
+          <div class="exp-pill">Internship</div>
+          <div class="exp-arrow">⌄</div>
+        </div>
+        <div class="exp-body"><div class="exp-body-inner"><ul>
+          <li>Conducted supplier research and outreach for industrial machinery procurement</li>
+          <li>Gained hands-on exposure to operations management and vendor coordination workflows</li>
+          <li>Supported process flows between internal teams and external supplier networks</li>
+        </ul></div></div>
+      </div>
+
+      <div class="exp-card" id="e3">
+        <div class="exp-head" onclick="tog('e3')">
+          <div class="exp-idx">04</div>
+          <div><div class="exp-role">Winner</div><div class="exp-org">Case Crunch 2.0</div></div>
+          <div class="exp-pill">Achievement</div>
+          <div class="exp-arrow">⌄</div>
+        </div>
+        <div class="exp-body"><div class="exp-body-inner"><ul>
+          <li>Solved a complex business case under time pressure using structured analytical reasoning</li>
+          <li>Applied frameworks across strategy, operations, and financial reasoning</li>
+          <li>Secured first place through clarity of argument and confidence in delivery</li>
+        </ul></div></div>
+      </div>
+
+      <div class="exp-card" id="e4">
+        <div class="exp-head" onclick="tog('e4')">
+          <div class="exp-idx">05</div>
+          <div><div class="exp-role">Co-Founder</div><div class="exp-org">Urvikshana NGO</div></div>
+          <div class="exp-pill">Social Impact</div>
+          <div class="exp-arrow">⌄</div>
+        </div>
+        <div class="exp-body"><div class="exp-body-inner"><ul>
+          <li>Co-founded an initiative focused on building environmental awareness in communities</li>
+          <li>Managed project planning, team coordination, and external partnerships</li>
+          <li>Developed operational structures for a grassroots-level organization from scratch</li>
+        </ul></div></div>
+      </div>
+
+      <div class="exp-card" id="e5">
+        <div class="exp-head" onclick="tog('e5')">
+          <div class="exp-idx">06</div>
+          <div><div class="exp-role">Volunteer</div><div class="exp-org">Youth For Seva</div></div>
+          <div class="exp-pill">Community</div>
+          <div class="exp-arrow">⌄</div>
+        </div>
+        <div class="exp-body"><div class="exp-body-inner"><ul>
+          <li>Raised ₹60,000 in funds to support over 100 underprivileged students</li>
+          <li>Contributed to campaign planning and community outreach strategy</li>
+        </ul></div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="rule"></div>
+
+  <!-- SKILLS -->
+  <section id="skills" class="sec" style="background: var(--bg);">
+    <div class="sec-label"><span class="sec-num">03</span> Skills</div>
+    <div class="skills-wrap">
+      <div class="skill-tile"><div class="skill-num">01</div><div class="skill-name">Strategy &amp; Problem Solving</div></div>
+      <div class="skill-tile"><div class="skill-num">02</div><div class="skill-name">Leadership &amp; Team Management</div></div>
+      <div class="skill-tile"><div class="skill-num">03</div><div class="skill-name">Operations &amp; Execution</div></div>
+      <div class="skill-tile"><div class="skill-num">04</div><div class="skill-name">Communication &amp; Networking</div></div>
+      <div class="skill-tile"><div class="skill-num">05</div><div class="skill-name">Research &amp; Analysis</div></div>
+      <div class="skill-tile"><div class="skill-num">06</div><div class="skill-name">MS Excel &amp; PowerPoint</div></div>
+    </div>
+  </section>
+
+  <div class="rule"></div>
+
+  <!-- EXPLORING -->
+  <section class="sec" style="background: var(--bg);">
+    <div class="sec-label"><span class="sec-num">04</span> Currently Exploring</div>
+    <div class="exploring-row">
+      <div class="explore-block">
+        <div class="explore-tag">Technology</div>
+        <div class="explore-title">AI in Business &amp; Automation</div>
+        <div class="explore-sub">Understanding where intelligent automation reshapes decision-making and operational efficiency.</div>
+      </div>
+      <div class="explore-block">
+        <div class="explore-tag">Ecosystems</div>
+        <div class="explore-title">Startup Ecosystems &amp; Strategy</div>
+        <div class="explore-sub">Mapping how startup ecosystems form, compete, and collapse — and what that means for founders.</div>
+      </div>
+      <div class="explore-block">
+        <div class="explore-tag">Growth</div>
+        <div class="explore-title">Scalable Business Models</div>
+        <div class="explore-sub">Studying the architecture behind businesses that can grow without proportional resource expansion.</div>
+      </div>
+      <div class="explore-block">
+        <div class="explore-tag">Craft</div>
+        <div class="explore-title">Real-World Execution</div>
+        <div class="explore-sub">Learning the practical difference between a plan on paper and something that actually ships.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rule"></div>
+
+  <!-- INSIGHTS -->
+  <section id="insights" class="sec" style="background: var(--bg);">
+    <div class="sec-label"><span class="sec-num">05</span> Insights</div>
+    <div class="blog-row">
+      <div class="blog-card">
+        <div class="blog-category">Strategy</div>
+        <div class="blog-title">Why execution beats planning — every single time</div>
+        <div class="blog-excerpt">Most strategy dies between the whiteboard and the real world. Here's what I've learned about closing that gap.</div>
+        <div class="blog-more">Read</div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-category">Entrepreneurship</div>
+        <div class="blog-title">What running E-Cell taught me about building teams</div>
+        <div class="blog-excerpt">Leading student-run organizations is the closest thing to running a startup — messy, fast, and deeply instructive.</div>
+        <div class="blog-more">Read</div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-category">Learning</div>
+        <div class="blog-title">On studying business and political science together</div>
+        <div class="blog-excerpt">Two disciplines that seem unrelated on paper — but together, they give the sharpest lens on why organizations behave as they do.</div>
+        <div class="blog-more">Read</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rule"></div>
+
+  <!-- CONTACT -->
+  <section id="contact" style="padding: 0; background: var(--bg);">
+    <div class="sec" style="padding-bottom: 0;">
+      <div class="sec-label"><span class="sec-num">06</span> Contact</div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-left">
+        <div>
+          <h2 class="contact-heading">Let's<br><em>Connect.</em></h2>
+          <p class="contact-sub">Whether it's a conversation about strategy, a collaboration idea, or just a strong opinion on why some organizations fail — I'm here for it.</p>
+          <a href="https://www.linkedin.com/in/mohnish-singh-patwal" target="_blank" class="contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            Connect on LinkedIn
+          </a>
+        </div>
+        <div style="padding-top: 32px; border-top: 0.5px solid var(--border);">
+          <div class="location-label">Based in</div>
+          <div class="location-val">Hyderabad, India</div>
+        </div>
+      </div>
+      <div class="contact-right">
+        <label class="f-label">Name</label>
+        <input class="f-field" type="text" placeholder="Your name" />
+        <label class="f-label">Email</label>
+        <input class="f-field" type="email" placeholder="your@email.com" />
+        <label class="f-label">Message</label>
+        <textarea class="f-field" placeholder="What's on your mind?"></textarea>
+        <button class="f-submit">Send Message →</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-l">Mohnish Singh Patwal</div>
+    <div class="footer-c">"Strategy in thought. Execution in action."</div>
+    <div class="footer-r">© 2025</div>
+  </footer>
+
+  <script>
+    function tog(id) {
+      document.getElementById(id).classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
